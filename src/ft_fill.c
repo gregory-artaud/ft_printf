@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_fill.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/17 15:38:44 by gartaud           #+#    #+#             */
-/*   Updated: 2020/11/18 16:43:53 by gartaud          ###   ########lyon.fr   */
+/*   Created: 2020/11/18 16:54:23 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 16:55:11 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,29 +38,4 @@ void	ft_fill(char **s1, char *s2, int *i)
 	*s1 = tmp;
 	*i += sub_ln - 1;
 	return ;
-}
-
-int		ft_printf(const char *s, ...)
-{
-	int		i;
-	char	*res;
-	int		res_ln;
-
-	if (!(res = malloc(sizeof(char))))
-		return (0);
-	*res = 0;
-	i = -1;
-	while (s[++i])
-		if (s[i] == '%')
-		{
-			/*
-			** Conversion specifier treatment
-			*/
-		}
-		else
-			ft_fill(&res, (char *)s + i, &i);
-	ft_putstr_fd(res, STDOUT);
-	res_ln = ft_strlen(res);
-	free(res);
-	return (res_ln);
 }
