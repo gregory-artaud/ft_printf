@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+         #
+#    By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/11/03 11:55:24 by gregory          ###   ########lyon.fr    #
+#    Updated: 2020/11/21 09:31:37 by gartaud          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,8 @@ FILES		=	ft_memset.c \
 				ft_putstr_fd.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \
-				ft_strndup.c
+				ft_strndup.c \
+				ft_strmcat.c
 BONUS_FILES = ft_lstnew.c \
 				ft_lstadd_front.c \
 				ft_lstsize.c \

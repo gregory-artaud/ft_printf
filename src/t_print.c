@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   t_print.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 16:09:13 by gartaud           #+#    #+#             */
-/*   Updated: 2020/11/21 15:37:35 by gartaud          ###   ########lyon.fr   */
+/*   Created: 2020/11/21 11:28:39 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/21 13:55:58 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <assert.h>
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
-int		main(void)
+t_print	*ft_pinit(va_list *args, char *format)
 {
-	//printf("\n=== ENTREE FT_PRINTF ===\n");
-	ft_printf("Hello World !\n");
-	//printf("\n=== SORTIE FT_PRINTF ===\n");
-	return (0);
+	t_print	*new;
+
+	new = malloc(sizeof(t_print));
+	if (!new)
+		return (0);
+	new->args = args;
+	new->format = format;
+	new->out = malloc(sizeof(char) * 1);
+	if (!(new->out))
+		return (0);
+	*(new->out) = 0;
+	return (new);
+}
+
+void	ft_pfree(t_print *p)
+{
+	free(p->out);
+	va_end(*(p->args));
+	free(p);
 }
