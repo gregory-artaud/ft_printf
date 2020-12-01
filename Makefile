@@ -6,7 +6,7 @@
 #    By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/17 15:38:17 by gartaud           #+#    #+#              #
-#    Updated: 2020/12/01 17:04:15 by gartaud          ###   ########lyon.fr    #
+#    Updated: 2020/12/01 22:41:46 by gartaud          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ FILES		= ft_printf.c \
 				src/spclen.c \
 				src/init_spc.c \
 				src/process_spc.c \
+				src/get_flag.c \
 				src/apply_c.c \
 				src/apply_d.c \
 				src/apply_p.c \

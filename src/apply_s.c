@@ -6,28 +6,11 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 14:32:22 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/01 19:04:11 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/01 22:42:14 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-char	get_flag(t_print *p, int spc_i)
-{
-	char	res;
-
-	res = 0;
-	while (isflag(p->format[spc_i]))
-	{
-		if (p->format[spc_i] == '-')
-			res = '-';
-		else if (p->format[spc_i] == '0' && res != '-'
-				&& p->precision == -1)
-			res = '0';
-		spc_i++;
-	}
-	return (res);
-}
 
 void	padding_right(char **dest, int dlen, int size)
 {
@@ -63,13 +46,11 @@ void	padding_left(char **dest, int dlen, int size)
 void	apply_s(char **dest, t_print *p, int spc_i)
 {
 	char	*str;
-	int		i;
 	int		res_ln;
 
 	str = (char *)va_arg(*(p->args), char *);
 	if (!str)
 		str = ft_strdup("(null)");
-	i = -1;
 	if (p->precision != -1)
 		*dest = ft_strndup(str, p->precision);
 	else
@@ -82,6 +63,5 @@ void	apply_s(char **dest, t_print *p, int spc_i)
 		else
 			padding_left(dest, res_ln, p->min_width);
 	}
-	//printf("flag : %c\n", get_flag(p, spc_i));
 	return ;
 }

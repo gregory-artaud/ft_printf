@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 15:37:54 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/01 17:03:43 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/01 22:41:27 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int				isconvert(char c);
 void			reset_spc(t_print *p);
 void			init_spc(t_print *p, int head);
 void			process_spc(char **dest, t_print *p, int spc_i);
+char			get_flag(t_print *p, int spc_i);
 void			apply_c(char **dest, t_print *p, int spc_i);
 void			apply_s(char **dest, t_print *p, int spc_i);
 void			apply_p(char **dest, t_print *p, int spc_i);
