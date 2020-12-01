@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 13:48:06 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/01 14:51:27 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/01 15:59:34 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,6 @@ void	process_spc(char **dest, t_print *p, int spc_i)
 	void	(*process[CONVERSION_NB])(char **, t_print *, int);
 	int		index;
 
-	(void)dest;
-	(void)spc_i;
 	init_ft_tab(process);
 	index = type_to_index(p->type);
 	if (index > -1)
