@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 13:48:06 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/01 15:59:34 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/01 17:02:45 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	init_ft_tab(void (*process[CONVERSION_NB])(char **, t_print *, int))
 	process[7] = apply_percent;
 }
 
-int 	type_to_index(char c)
+int		type_to_index(char c)
 {
 	if (c == 'c')
 		return (0);

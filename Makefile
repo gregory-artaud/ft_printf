@@ -6,7 +6,7 @@
 #    By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/17 15:38:17 by gartaud           #+#    #+#              #
-#    Updated: 2020/12/01 14:50:54 by gartaud          ###   ########lyon.fr    #
+#    Updated: 2020/12/01 17:04:15 by gartaud          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ LIBFT		= libft
 TEST_MAIN	= tests/main.c
 TEST_EXEC	= tests/exec
 NORME		= ~/.norminette/norminette.rb
+#NORME		= norminette
 
 all: $(NAME)
 
