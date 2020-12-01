@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   convert.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 22:29:23 by gartaud           #+#    #+#             */
-/*   Updated: 2020/11/18 17:06:32 by gartaud          ###   ########lyon.fr   */
+/*   Created: 2020/11/21 10:07:41 by gartaud           #+#    #+#             */
+/*   Updated: 2020/12/01 14:42:01 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_isascii(int c)
+void	convert(t_print *p, int *i)
 {
-	return ((c >= 0) && (c < 128));
+	int		spc_ln;
+	char	*tmp;
+
+	if (!(tmp = malloc(sizeof(char))))
+		return ;
+	*tmp = 0;
+	spc_ln = spclen(p->format + *i);
+	init_spc(p, *i + 1);
+	process_spc(&tmp, p, *i + 1);
+	ft_strmcat(&(p->out), tmp);
+	free(tmp);
+	*i += spc_ln - 1;
+	reset_spc(p);
+	return ;
 }

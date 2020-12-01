@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_spcln.c                                         :+:      :+:    :+:   */
+/*   ft_spclen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 15:08:29 by gartaud           #+#    #+#             */
-/*   Updated: 2020/11/21 15:08:43 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/01 13:45:57 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_isflag(char c)
+int		isflag(char c)
 {
-	return ((c == '-') || (c == '0')
-			|| (c == '.') || (c == '*'));
+	return ((c == '-') || (c == '0'));
 }
 
-int		ft_isconvert(char c)
+int		isconvert(char c)
 {
 	return ((c == 'c') || (c == 's')
 			|| (c == 'p') || (c == 'd')
@@ -27,16 +26,34 @@ int		ft_isconvert(char c)
 			|| (c == '%'));
 }
 
-int		ft_spcln(char *s)
+void	jump_nbr(char *s, int *i)
+{
+	if (s[*i] == '*')
+		(*i)++;
+	while (ft_isdigit(s[*i]))
+		(*i)++;
+	if (s[*i] == '$')
+		(*i)++;
+	return ;
+}
+
+int		spclen(char *s)
 {
 	int		i;
 
 	if (*s != '%')
 		return (0);
 	i = 1;
-	while (ft_isdigit(s[i]) || ft_isflag(s[i]))
+	jump_nbr(s, &i);
+	while (isflag(s[i]))
 		i++;
-	while (ft_isconvert(s[i]))
+	jump_nbr(s, &i);
+	if (s[i] == '.')
+	{
+		i++;
+		jump_nbr(s, &i);
+	}
+	if (isconvert(s[i]))
 		i++;
 	return (i);
 }

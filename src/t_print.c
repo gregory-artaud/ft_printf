@@ -6,13 +6,13 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 11:28:39 by gartaud           #+#    #+#             */
-/*   Updated: 2020/11/21 13:55:58 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/01 13:45:08 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_print	*ft_pinit(va_list *args, char *format)
+t_print	*pinit(va_list *args, char *format)
 {
 	t_print	*new;
 
@@ -25,12 +25,20 @@ t_print	*ft_pinit(va_list *args, char *format)
 	if (!(new->out))
 		return (0);
 	*(new->out) = 0;
+	reset_spc(new);
 	return (new);
 }
 
-void	ft_pfree(t_print *p)
+void	pfree(t_print *p)
 {
 	free(p->out);
-	va_end(*(p->args));
 	free(p);
+}
+
+void	reset_spc(t_print *p)
+{
+	p->min_width = 0;
+	p->precision = -1;
+	p->type = 0;
+	return ;
 }

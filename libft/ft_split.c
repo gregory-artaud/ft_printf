@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/02 16:39:41 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/04 11:51:44 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/07/02 16:39:41 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:04:36 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ char			**ft_split(char const *s, char c)
 	unsigned int	j;
 	unsigned int	word_start_i;
 
+	if (!s)
+		return (0);
 	res = malloc(sizeof(char *) * ((ft_count_words(s, c) + 1)));
 	if (!res)
 		return (0);

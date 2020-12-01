@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   apply_p.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 22:29:23 by gartaud           #+#    #+#             */
-/*   Updated: 2020/11/18 17:06:32 by gartaud          ###   ########lyon.fr   */
+/*   Created: 2020/12/01 14:32:22 by gartaud           #+#    #+#             */
+/*   Updated: 2020/12/01 14:35:38 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_isascii(int c)
+void	apply_p(char **dest, t_print *p, int spc_i)
 {
-	return ((c >= 0) && (c < 128));
+	(void)dest;
+	(void)p;
+	(void)spc_i;
+	return ;
 }

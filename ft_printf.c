@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 15:38:44 by gartaud           #+#    #+#             */
-/*   Updated: 2020/11/21 14:09:11 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/01 08:46:01 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,16 @@ int		ft_printf(const char *s, ...)
 	int		i;
 
 	va_start(args, s);
-	p = ft_pinit(&args, (char *)s);
+	p = pinit(&args, (char *)s);
 	i = -1;
 	while (s[++i])
 		if (s[i] == '%')
-			ft_convert(p, &i);
+			convert(p, &i);
 		else
-			ft_fill(p, &i);
+			fill(p, &i);
 	ft_putstr_fd(p->out, STDOUT);
 	res_ln = ft_strlen(p->out);
-	ft_pfree(p);
+	pfree(p);
+	va_end(args);
 	return (res_ln);
 }

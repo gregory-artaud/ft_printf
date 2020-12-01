@@ -6,7 +6,7 @@
 #    By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/17 15:38:17 by gartaud           #+#    #+#              #
-#    Updated: 2020/11/21 15:35:47 by gartaud          ###   ########lyon.fr    #
+#    Updated: 2020/12/01 14:50:54 by gartaud          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,10 +14,19 @@ NAME		= libftprintf.a
 CC			= gcc
 CFLAGS		= -Wall -Werror -Wextra -O2
 FILES		= ft_printf.c \
-				src/ft_fill.c \
-				src/ft_convert.c \
+				src/fill.c \
+				src/convert.c \
 				src/t_print.c \
-				src/ft_spcln.c
+				src/spclen.c \
+				src/init_spc.c \
+				src/process_spc.c \
+				src/apply_c.c \
+				src/apply_d.c \
+				src/apply_p.c \
+				src/apply_u.c \
+				src/apply_x.c \
+				src/apply_s.c \
+				src/apply_percent.c
 OBJ			= $(FILES:%.c=%.o)
 HEADER		= includes
 LIBFT		= libft

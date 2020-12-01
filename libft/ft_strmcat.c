@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 09:26:02 by gartaud           #+#    #+#             */
-/*   Updated: 2020/11/21 09:48:09 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/01 07:26:52 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,3 +89,4 @@ void			ft_strmcat(char **s1, char *s2)
 	*s1 = res;
 	return ;
 }
+

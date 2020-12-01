@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_fill.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/16 12:14:06 by gartaud           #+#    #+#             */
-/*   Updated: 2020/11/18 17:04:47 by gartaud          ###   ########lyon.fr   */
+/*   Created: 2020/11/18 16:54:23 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/21 11:33:40 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_putendl_fd(char *s, int fd)
+/*
+** Puts in s1 the rest of s2 untill the next '%'
+** character or the end of s2
+*/
+
+void	fill(t_print *p, int *i)
 {
-	int	i;
+	char	*sub;
+	char	*tmp;
+	char	*rd_head;
+	int		sub_ln;
 
-	if (!s)
+	rd_head = p->format + *i;
+	if ((tmp = ft_strchr(rd_head, '%')))
+		sub_ln = tmp - rd_head;
+	else
+		sub_ln = ft_strlen(rd_head);
+	if (!sub_ln)
 		return ;
-	i = -1;
-	while (s[++i])
-		write(fd, s + i, 1);
-	write(fd, "\n", 1);
+	sub = ft_substr(rd_head, 0, sub_ln);
+	ft_strmcat(&(p->out), sub);
+	*i += sub_ln - 1;
+	free(sub);
 	return ;
 }

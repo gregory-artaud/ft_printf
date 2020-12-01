@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 15:51:56 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 17:20:17 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/06/28 15:51:56 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:05:01 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	d = (char *)dest;
 	s = (char *)src;
+	if (!d && !s)
+		return (0);
 	i = -1;
 	while (++i < n)
 		d[i] = s[i];

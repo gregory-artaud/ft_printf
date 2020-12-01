@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 22:35:01 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:00:44 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/06/28 22:35:01 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:06:21 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/18 11:27:44 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/04 16:04:37 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/07/18 11:27:44 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:05:46 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
