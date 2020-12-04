@@ -6,7 +6,7 @@
 #    By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/17 15:38:17 by gartaud           #+#    #+#              #
-#    Updated: 2020/12/04 17:33:18 by gartaud          ###   ########lyon.fr    #
+#    Updated: 2020/12/04 17:39:40 by gartaud          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ FILES		= ft_printf.c \
 				src/apply_p.c \
 				src/apply_u.c \
 				src/apply_x.c \
-				src/apply_bigX.c \
+				src/apply_big_x.c \
 				src/apply_s.c \
 				src/apply_percent.c
 OBJ			= $(FILES:%.c=%.o)

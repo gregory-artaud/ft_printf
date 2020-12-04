@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 15:37:54 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 17:32:58 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 17:39:31 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ void			insert_minus(char **dest);
 void			apply_flags_nb(char **dest, t_print *p, int spc_i, int is_neg);
 int				apply_c(char **dest, t_print *p, int spc_i);
 int				apply_s(char **dest, t_print *p, int spc_i);
-//int				apply_p(char **dest, t_print *p, int spc_i);
+int				apply_p(char **dest, t_print *p, int spc_i);
 int				apply_d(char **dest, t_print *p, int spc_i);
 int				apply_u(char **dest, t_print *p, int spc_i);
 int				apply_x(char **dest, t_print *p, int spc_i);
-int				apply_bigX(char **dest, t_print *p, int spc_i);
+int				apply_big_x(char **dest, t_print *p, int spc_i);
 int				apply_percent(char **dest, t_print *p, int spc_i);
 
 #endif

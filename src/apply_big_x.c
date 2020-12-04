@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   apply_bigX.c                                       :+:      :+:    :+:   */
+/*   apply_big_x.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 17:32:23 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 17:32:47 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 17:39:14 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		apply_bigX(char **dest, t_print *p, int spc_i)
+int		apply_big_x(char **dest, t_print *p, int spc_i)
 {
 	long int	arg;
 	int			is_neg;
