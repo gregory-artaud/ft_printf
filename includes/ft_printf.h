@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 15:37:54 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 09:16:36 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 17:26:53 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,17 @@ int				isflag(char c);
 int				isconvert(char c);
 void			reset_spc(t_print *p);
 void			init_spc(t_print *p, int head);
-int					process_spc(char **dest, t_print *p, int spc_i);
+int				process_spc(char **dest, t_print *p, int spc_i);
 char			get_flag(t_print *p, int spc_i);
+void			insert_minus(char **dest);
+void			apply_flags_nb(char **dest, t_print *p, int spc_i, int is_neg);
 int				apply_c(char **dest, t_print *p, int spc_i);
 int				apply_s(char **dest, t_print *p, int spc_i);
-//void			apply_p(char **dest, t_print *p, int spc_i);
-//void			apply_d(char **dest, t_print *p, int spc_i);
-//void			apply_u(char **dest, t_print *p, int spc_i);
-//void			apply_x(char **dest, t_print *p, int spc_i);
+//int				apply_p(char **dest, t_print *p, int spc_i);
+int				apply_d(char **dest, t_print *p, int spc_i);
+int				apply_u(char **dest, t_print *p, int spc_i);
+int				apply_x(char **dest, t_print *p, int spc_i);
+//int				apply_X(char **dest, t_print *p, int spc_i);
 int				apply_percent(char **dest, t_print *p, int spc_i);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 09:26:02 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 10:33:44 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 13:52:05 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,10 @@ void			ft_strmcat(char **s1, char *s2)
 	int		res_ln;
 	int		s1_ln;
 
-	s1_ln = my_strlen(*s1);
+	if (!*s1)
+		s1_ln = 0;
+	else
+		s1_ln = my_strlen(*s1);
 	res_ln = s1_ln + my_strlen(s2);
 	if (!(res = ft_calloc(res_ln + 1, 1)))
 		return ;

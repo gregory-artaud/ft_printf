@@ -6,7 +6,7 @@
 #    By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gartaud           #+#    #+#              #
-#    Updated: 2020/12/04 08:15:46 by gartaud          ###   ########lyon.fr    #
+#    Updated: 2020/12/04 17:20:00 by gartaud          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,9 @@ FILES		=	ft_memset.c \
 				ft_putnbr_fd.c \
 				ft_strndup.c \
 				ft_strmcat.c \
-				ft_strpad.c
+				ft_strpad.c \
+				ft_itoa_base.c \
+				ft_strinsert.c
 BONUS_FILES = ft_lstnew.c \
 				ft_lstadd_front.c \
 				ft_lstsize.c \

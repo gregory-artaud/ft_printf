@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strinsert.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/18 16:09:13 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 17:14:48 by gartaud          ###   ########lyon.fr   */
+/*   Created: 2020/12/04 17:18:57 by gartaud           #+#    #+#             */
+/*   Updated: 2020/12/04 17:19:18 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <assert.h>
-#include "../includes/ft_printf.h"
+#include "libft.h"
 
-int		main(void)
+void	ft_strinsert(char **s, int i, char c)
 {
-	//printf("\n=== ENTREE FT_PRINTF ===\n");
-	ft_printf("mine : %u\n", 4294967295u);
-	printf("real : %u\n", 4294967295u);
-	//printf("\n=== SORTIE FT_PRINTF ===\n");
+	int		ln;
+	char	*res;
 
-	return (0);
+	if (!*s)
+		return ;
+	ln = ft_strlen(*s);
+	if (!(res = ft_calloc(ln + 2, 1)))
+		return ;
+	ft_memcpy(res, *s, i);
+	res[i] = c;
+	ft_memcpy(res + i + 1, *s + i, ln - i);
+	free(*s);
+	*s = res;
+	return ;
 }

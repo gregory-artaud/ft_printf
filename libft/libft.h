@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 13:57:05 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 08:35:41 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 17:19:45 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# define ABS(x) (x < 0) ? -x : x
 # define LFT_LEFT 1
 # define LFT_RIGHT 0
 typedef struct	s_list
@@ -82,5 +83,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 */
 void			ft_strmcat(char **s1, char *s2);
 void			ft_strpad(char **dest, int side, int min_size, char c);
+char			*ft_itoa_base(long long nbr, char *base);
+void			ft_strinsert(char **s, int i, char c);
 
 #endif

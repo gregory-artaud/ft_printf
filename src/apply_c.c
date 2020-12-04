@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 14:32:22 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 10:24:12 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 16:52:35 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	bypass_strlen(char *s)
 	return (i);
 }
 
-int		apply_c(char **dest, t_print *p, int spc_i)
+int			apply_c(char **dest, t_print *p, int spc_i)
 {
 	unsigned char	c;
 	char			flag;
