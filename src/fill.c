@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/18 16:54:23 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 09:12:10 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 10:49:48 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int		fill(t_print *p, int *i)
 	if (!sub_ln)
 		return (0);
 	sub = ft_substr(rd_head, 0, sub_ln);
-	ft_strmcat(&(p->out), sub);
+	write(STDOUT, sub, sub_ln);
 	*i += sub_ln - 1;
 	free(sub);
 	return (sub_ln);

@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 15:38:44 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 09:12:51 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 10:49:07 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int		ft_printf(const char *s, ...)
 			res_ln += convert(p, &i);
 		else
 			res_ln += fill(p, &i);
-	write(STDOUT, p->out, res_ln);
 	pfree(p);
 	va_end(args);
 	return (res_ln);
