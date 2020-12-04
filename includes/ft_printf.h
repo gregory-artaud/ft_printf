@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 15:37:54 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 17:26:53 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 17:32:58 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int				apply_s(char **dest, t_print *p, int spc_i);
 int				apply_d(char **dest, t_print *p, int spc_i);
 int				apply_u(char **dest, t_print *p, int spc_i);
 int				apply_x(char **dest, t_print *p, int spc_i);
-//int				apply_X(char **dest, t_print *p, int spc_i);
+int				apply_bigX(char **dest, t_print *p, int spc_i);
 int				apply_percent(char **dest, t_print *p, int spc_i);
 
 #endif

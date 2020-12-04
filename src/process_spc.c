@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 13:48:06 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 17:26:37 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 17:33:28 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	init_ft_tab(int (*process[CONVERSION_NB])(char **, t_print *, int))
 	process[3] = apply_d;
 	process[4] = apply_u;
 	process[5] = apply_x;
-	//process[6] = apply_X;
+	process[6] = apply_bigX;
 	process[7] = apply_percent;
 }
 
