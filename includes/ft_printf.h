@@ -6,13 +6,14 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 15:37:54 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 17:50:59 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 18:35:01 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+#include <stdio.h>
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>

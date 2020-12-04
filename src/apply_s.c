@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 14:32:22 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 09:17:12 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 18:48:10 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,19 @@
 int		apply_s(char **dest, t_print *p, int spc_i)
 {
 	char	*str;
+	int		flag;
 
 	str = (char *)va_arg(*(p->args), char *);
+	flag = get_flag(p, spc_i);
 	if (!str)
 		str = ft_strdup("(null)");
-	if (p->precision != -1)
+	if (p->precision >= 0)
 		*dest = ft_strndup(str, p->precision);
 	else
 		*dest = ft_strdup(str);
 	if ((int)ft_strlen(*dest) < p->min_width)
 	{
-		if (get_flag(p, spc_i) == '-')
+		if (flag == '-')
 			ft_strpad(dest, LFT_RIGHT, p->min_width, ' ');
 		else
 			ft_strpad(dest, LFT_LEFT, p->min_width, ' ');
