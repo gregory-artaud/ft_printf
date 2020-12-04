@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/21 09:26:02 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/01 07:26:52 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 10:33:44 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,6 @@ static size_t	my_strlcpy(char *dst, const char *src, size_t size)
 	return (slen);
 }
 
-static void		*my_bzero(void *s, size_t n)
-{
-	unsigned int	i;
-	char			*str;
-
-	str = (char *)s;
-	i = -1;
-	while (++i < n)
-		str[i] = 0;
-	return (s);
-}
-
 static size_t	my_strlcat(char *dst, const char *src, size_t size)
 {
 	unsigned int i;
@@ -80,9 +68,8 @@ void			ft_strmcat(char **s1, char *s2)
 
 	s1_ln = my_strlen(*s1);
 	res_ln = s1_ln + my_strlen(s2);
-	if (!(res = malloc(sizeof(char) * (res_ln + 1))))
+	if (!(res = ft_calloc(res_ln + 1, 1)))
 		return ;
-	my_bzero(res, res_ln);
 	my_strlcpy(res, *s1, s1_ln + 1);
 	my_strlcat(res, s2, res_ln + 1);
 	free(*s1);

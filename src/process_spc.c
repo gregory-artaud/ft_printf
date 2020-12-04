@@ -6,21 +6,21 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 13:48:06 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/01 17:02:45 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 09:24:59 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	init_ft_tab(void (*process[CONVERSION_NB])(char **, t_print *, int))
+void	init_ft_tab(int (*process[CONVERSION_NB])(char **, t_print *, int))
 {
 	process[0] = apply_c;
 	process[1] = apply_s;
-	process[2] = apply_p;
-	process[3] = apply_d;
-	process[4] = apply_u;
-	process[5] = apply_x;
-	process[6] = apply_x;
+	//process[2] = apply_p;
+	//process[3] = apply_d;
+	//process[4] = apply_u;
+	//process[5] = apply_x;
+	//process[6] = apply_x;
 	process[7] = apply_percent;
 }
 
@@ -46,14 +46,14 @@ int		type_to_index(char c)
 		return (-1);
 }
 
-void	process_spc(char **dest, t_print *p, int spc_i)
+int		process_spc(char **dest, t_print *p, int spc_i)
 {
-	void	(*process[CONVERSION_NB])(char **, t_print *, int);
+	int		(*process[CONVERSION_NB])(char **, t_print *, int);
 	int		index;
 
 	init_ft_tab(process);
 	index = type_to_index(p->type);
 	if (index > -1)
-		process[index](dest, p, spc_i);
-	return ;
+		return (process[index](dest, p, spc_i));
+	return (0);
 }

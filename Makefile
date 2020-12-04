@@ -6,13 +6,13 @@
 #    By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/17 15:38:17 by gartaud           #+#    #+#              #
-#    Updated: 2020/12/01 22:41:46 by gartaud          ###   ########lyon.fr    #
+#    Updated: 2020/12/04 10:18:35 by gartaud          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libftprintf.a
 CC			= gcc
-CFLAGS		= -Wall -Werror -Wextra -O2
+CFLAGS		= -Wall -Werror -Wextra -O3
 FILES		= ft_printf.c \
 				src/fill.c \
 				src/convert.c \
