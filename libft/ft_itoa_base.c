@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 11:13:39 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 17:30:08 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 17:52:04 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int				count_digits_base(long long nbr, int base)
 	return (res);
 }
 
-char	*ft_itoa_base(long long nbr, char *base)
+char			*ft_itoa_base(long long nbr, char *base)
 {
 	char	*res;
 	int		is_neg;

@@ -6,7 +6,7 @@
 #    By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/17 15:38:17 by gartaud           #+#    #+#              #
-#    Updated: 2020/12/04 17:39:40 by gartaud          ###   ########lyon.fr    #
+#    Updated: 2020/12/04 17:51:30 by gartaud          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,6 @@ leaks: $(NAME)
 	@valgrind --leak-check=full ./$(TEST_EXEC)
 
 norme:
-	$(NORME) includes/ft_printf.h ft_printf.c src/*.c
+	$(NORME) includes/ft_printf.h ft_printf.c src/*.c libft/*.c libft/*.h
 
 .PHONY: clean fclean all re

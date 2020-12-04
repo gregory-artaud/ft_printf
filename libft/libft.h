@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 13:57:05 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 17:19:45 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/04 17:54:30 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # define ABS(x) (x < 0) ? -x : x
 # define LFT_LEFT 1
 # define LFT_RIGHT 0
+
 typedef struct	s_list
 {
 	void			*content;
