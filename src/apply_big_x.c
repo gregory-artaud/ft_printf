@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 17:32:23 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/04 17:50:13 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/10 11:29:40 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		apply_big_x(char **dest, t_print *p, int spc_i)
 	if (!arg && !p->precision)
 		*dest = ft_strdup("");
 	else
-		*dest = ft_itoa_base(ABS(arg), "0123456789ABCDEF");
+		*dest = ft_itoa_base(ft_abs(arg), "0123456789ABCDEF");
 	if (!dest)
 		return (0);
 	apply_flags_nb(dest, p, spc_i, is_neg);
