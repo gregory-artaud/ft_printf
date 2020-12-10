@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/29 11:36:49 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/04 16:30:48 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/06/29 11:36:49 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:03:46 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

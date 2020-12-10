@@ -3,14 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+         #
+#    By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/11/03 11:55:24 by gregory          ###   ########lyon.fr    #
+#    Created: 2020/06/28 13:46:16 by gartaud           #+#    #+#              #
+#    Updated: 2020/12/10 11:28:19 by gartaud          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libft.a
+SHARED		= libft.so
 CFLAGS		= -Wall -Werror -Wextra -c
 CC			= gcc
 DEPS		= libft.h
@@ -48,7 +49,12 @@ FILES		=	ft_memset.c \
 				ft_putstr_fd.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \
-				ft_strndup.c
+				ft_strndup.c \
+				ft_strmcat.c \
+				ft_strpad.c \
+				ft_itoa_base.c \
+				ft_strinsert.c \
+				ft_abs.c
 BONUS_FILES = ft_lstnew.c \
 				ft_lstadd_front.c \
 				ft_lstsize.c \
@@ -69,6 +75,10 @@ $(NAME): $(OBJ)
 bonus: $(OBJ) $(BONUS_OBJ)
 	ar rcs $(NAME) $^
 
+so:
+	$(CC) -fPIC $(CFLAGS) $(FILES)
+	$(CC) -shared -o $(SHARED) $(OBJ)
+
 %.o: %.c $(DEPS)
 	$(CC) $(CFLAGS) $< -o $@
 
@@ -78,6 +88,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f $(SHARED)
 
 re: fclean all
 

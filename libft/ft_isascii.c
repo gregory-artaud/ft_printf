@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 22:29:23 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 21:21:55 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/06/28 22:29:23 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:06:32 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

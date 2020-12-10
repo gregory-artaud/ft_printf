@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 22:23:19 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 17:46:08 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/06/28 22:23:19 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:06:38 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

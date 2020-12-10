@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/17 11:38:54 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/04 15:47:43 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/07/17 11:38:54 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:06:10 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

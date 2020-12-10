@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 20:45:18 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:00:39 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/06/28 20:45:18 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:06:35 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 22:15:15 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:00:42 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/06/28 22:15:15 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:06:29 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

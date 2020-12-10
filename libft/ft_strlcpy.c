@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/29 10:20:46 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/04 11:42:17 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/06/29 10:20:46 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:04:15 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static size_t	my_strlen(const char *s)
 {
 	unsigned int i;
 
+	if (!s)
+		return (0);
 	i = 0;
 	while (s[i])
 		i++;
@@ -28,7 +30,9 @@ size_t			ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t			slen;
 
 	slen = my_strlen(src);
-	if (size != 0)
+	if (!dst || !src)
+		return (slen);
+	if (size > 0)
 	{
 		i = 0;
 		while ((i < size - 1) && (i < slen))

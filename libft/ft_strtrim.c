@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/02 08:09:42 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/04 11:45:45 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/07/02 08:09:42 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:03:36 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,12 @@ static int		ft_strisin(char const *s, char const c)
 	unsigned int	j;
 	size_t			s_len;
 
-	i = 0;
+	i = -1;
 	j = 0;
 	s_len = my_strlen(s);
-	while (i < s_len)
-	{
+	while (++i < s_len)
 		if (s[i] == c)
 			j++;
-		i++;
-	}
 	return (j);
 }
 
@@ -48,8 +45,11 @@ char			*ft_strtrim(char const *s1, char const *set)
 	size_t			new_s_len;
 	char			*new_s;
 
+	if (!s1)
+		return (0);
 	i = 0;
-	s_len = my_strlen(s1);
+	if (!(s_len = my_strlen(s1)))
+		return ((char *)s1);
 	while (ft_strisin(set, s1[i]))
 		i++;
 	j = s_len - 1;
@@ -57,6 +57,8 @@ char			*ft_strtrim(char const *s1, char const *set)
 		j--;
 	new_s_len = j - i + 1;
 	new_s = malloc(sizeof(char) * (new_s_len + 1));
+	if (!new_s)
+		return (0);
 	j = -1;
 	while (++j < new_s_len)
 		new_s[j] = s1[i + j];

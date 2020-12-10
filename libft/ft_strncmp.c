@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 23:27:50 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 21:31:04 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/06/28 23:27:50 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:04:01 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

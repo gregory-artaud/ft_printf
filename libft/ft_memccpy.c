@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 19:04:02 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 17:31:50 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/06/28 19:04:02 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:05:11 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

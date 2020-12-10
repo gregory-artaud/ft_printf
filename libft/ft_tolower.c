@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 22:59:01 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 21:22:53 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/06/28 22:59:01 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:03:27 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
