@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 14:32:22 by gartaud           #+#    #+#             */
-/*   Updated: 2021/01/11 07:45:55 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2021/01/11 07:54:59 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		apply_u(char **dest, t_print *p, int spc_i)
 {
 	unsigned int	arg;
-	int					is_neg;
+	int				is_neg;
 
 	arg = (unsigned int)va_arg(*(p->args), unsigned int);
 	is_neg = (arg < 0);
