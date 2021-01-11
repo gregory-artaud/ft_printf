@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 14:32:22 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/10 11:29:14 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2021/01/11 07:45:55 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int		apply_u(char **dest, t_print *p, int spc_i)
 {
-	long int	arg;
-	int			is_neg;
+	unsigned int	arg;
+	int					is_neg;
 
-	arg = (long)va_arg(*(p->args), long);
+	arg = (unsigned int)va_arg(*(p->args), unsigned int);
 	is_neg = (arg < 0);
 	if (!arg && !p->precision)
 		*dest = ft_strdup("");

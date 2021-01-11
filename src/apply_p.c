@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 14:32:22 by gartaud           #+#    #+#             */
-/*   Updated: 2020/12/10 14:08:54 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2021/01/11 07:32:53 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,13 @@ void	set_head(char **dest)
 
 int		apply_p(char **dest, t_print *p, int spc_i)
 {
-	long int	arg;
-	int			is_neg;
-	char		*tmp;
+	unsigned long long	arg;
+	int					is_neg;
+	char				*tmp;
 
-	arg = (unsigned long)va_arg(*(p->args), unsigned long);
+	arg = (unsigned long long)va_arg(*(p->args), unsigned long long);
+	if (arg == ULONG_MAX && (*dest = ft_strdup("0xffffffffffffffff")))
+		return (ft_strlen(*dest));
 	is_neg = (arg < 0);
 	if (!arg && !p->precision)
 		*dest = ft_strdup("");
